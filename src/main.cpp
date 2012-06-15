@@ -401,14 +401,14 @@ void initTexture(void)
 				printf("found blue car at (%d, %d)\n", x, z);
 				blueCar_x = (float)x / (float)mapinfo->bmiHeader.biWidth;
 				blueCar_z = (float)z / (float)mapinfo->bmiHeader.biHeight;
-                carFound ++;
+                carFound++;
 			}
 
 			if ((mapbits + x * z)[2] >= (GLubyte)250) { // Red car
 				printf("found red car at (%d, %d)\n", x, z);
 				redCar_x = (float)x / (float)mapinfo->bmiHeader.biWidth;
 				redCar_z = (float)z / (float)mapinfo->bmiHeader.biHeight;
-                carFound ++;
+                carFound++;
 			}
 		}
 	}
@@ -534,10 +534,12 @@ void updateState() {
 
 	if (leftPressed) {
 		roty -= 3.0f;
+		modelPOR.RotateX(3.0);
 	}
 
 	if (rightPressed) {
 		roty += 3.0f;
+		modelPOR.RotateX(-3.0);
 	}
 
 //TODO: gottta improve that, get it smoother. DAT SHIT IS RUNNING LIKE KRAZY DHAUG
