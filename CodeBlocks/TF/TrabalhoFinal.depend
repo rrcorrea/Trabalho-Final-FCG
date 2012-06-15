@@ -1,0 +1,227 @@
+# depslib dependency file v1.0
+1339377408 source:c:\users\gennaro\desktop\trabalho final fcg\src\modelal.cpp
+	<windows.h>
+	<gl/glut.h>
+	"ModelAl.h"
+	"Vetor3D.h"
+
+976674172 c:\users\gennaro\desktop\trabalho final fcg\codeblocks\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1254353242 c:\users\gennaro\desktop\trabalho final fcg\codeblocks\include\gl\gl.h
+
+1254353242 c:\users\gennaro\desktop\trabalho final fcg\codeblocks\include\gl\glu.h
+	<GL/gl.h>
+
+1336154952 c:\users\gennaro\desktop\trabalho final fcg\src\modelal.h
+	<stdio.h>
+	<string.h>
+	"3DObject.h"
+	"Sphere.h"
+	<vector>
+
+1336154924 c:\users\gennaro\desktop\trabalho final fcg\src\3dobject.h
+	<string.h>
+	"glm.h"
+
+1336323786 c:\users\gennaro\desktop\trabalho final fcg\src\glm.h
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<iostream>
+	<gl/glut.h>
+
+1336154914 c:\users\gennaro\desktop\trabalho final fcg\src\sphere.h
+	<string.h>
+	<gl/glut.h>
+
+1323085738 c:\users\gennaro\desktop\trabalho final fcg\src\vetor3d.h
+
+1339558106 source:c:\users\gennaro\desktop\trabalho final fcg\src\modelporsche.cpp
+	"ModelPorsche.h"
+	<windows.h>
+	<gl/glut.h>
+	"ModelAl.h"
+	"Vetor3D.h"
+
+1339470688 c:\users\gennaro\desktop\trabalho final fcg\src\modelporsche.h
+	<stdio.h>
+	<string.h>
+	"3DObject.h"
+	"Sphere.h"
+	<vector>
+
+1336325124 source:c:\users\gennaro\desktop\trabalho final fcg\src\sphere.cpp
+	<windows.h>
+	<gl/glut.h>
+	"Vetor3D.h"
+	"Sphere.h"
+	<math.h>
+
+1323085738 source:c:\users\gennaro\desktop\trabalho final fcg\src\vetor3d.cpp
+	"Vetor3D.h"
+	<math.h>
+
+1150220762 source:c:\users\gennaro\desktop\trabalho final fcg\src\bitmap.c
+	"bitmap.h"
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+
+1032704640 c:\users\gennaro\desktop\trabalho final fcg\src\bitmap.h
+	<GL/glut.h>
+	<windows.h>
+	<wingdi.h>
+
+1336324842 source:c:\users\gennaro\desktop\trabalho final fcg\src\glm.cpp
+	<windows.h>
+	<math.h>
+	<cmath>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	"glm.h"
+
+1336151164 source:c:\users\gennaro\desktop\trabalho final fcg\src\3dobject.cpp
+	"3DObject.h"
+	<malloc.h>
+
+1339728997 source:c:\users\gennaro\desktop\trabalho final fcg\src\main.cpp
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<cmath>
+	<iostream>
+	<gl/glut.h>
+	<al/alut.h>
+	"bitmap.h"
+	"../../src/ModelPorsche.h"
+
+1334588768 c:\users\gennaro\desktop\trabalho final fcg\codeblocks\include\al\alut.h
+	<al/alc.h>
+	<al/al.h>
+	<OpenAL/alc.h>
+	<OpenAL/al.h>
+	<AL/al.h>
+	<AL/alc.h>
+
+1176490968 c:\users\gennaro\desktop\trabalho final fcg\codeblocks\include\al\alc.h
+
+1165602658 c:\users\gennaro\desktop\trabalho final fcg\codeblocks\include\al\al.h
+
+1339377408 source:e:\trabalho final fcg\src\modelal.cpp
+	<windows.h>
+	<gl/glut.h>
+	"ModelAl.h"
+	"Vetor3D.h"
+
+976674172 e:\trabalho final fcg\codeblocks\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1254353242 e:\trabalho final fcg\codeblocks\include\gl\gl.h
+
+1254353242 e:\trabalho final fcg\codeblocks\include\gl\glu.h
+	<GL/gl.h>
+
+1336154952 e:\trabalho final fcg\src\modelal.h
+	<stdio.h>
+	<string.h>
+	"3DObject.h"
+	"Sphere.h"
+	<vector>
+
+1336154924 e:\trabalho final fcg\src\3dobject.h
+	<string.h>
+	"glm.h"
+
+1336323786 e:\trabalho final fcg\src\glm.h
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<iostream>
+	<gl/glut.h>
+
+1336154914 e:\trabalho final fcg\src\sphere.h
+	<string.h>
+	<gl/glut.h>
+
+1323085738 e:\trabalho final fcg\src\vetor3d.h
+
+1339558106 source:e:\trabalho final fcg\src\modelporsche.cpp
+	"ModelPorsche.h"
+	<windows.h>
+	<gl/glut.h>
+	"ModelAl.h"
+	"Vetor3D.h"
+
+1339470688 e:\trabalho final fcg\src\modelporsche.h
+	<stdio.h>
+	<string.h>
+	"3DObject.h"
+	"Sphere.h"
+	<vector>
+
+1336325124 source:e:\trabalho final fcg\src\sphere.cpp
+	<windows.h>
+	<gl/glut.h>
+	"Vetor3D.h"
+	"Sphere.h"
+	<math.h>
+
+1323085738 source:e:\trabalho final fcg\src\vetor3d.cpp
+	"Vetor3D.h"
+	<math.h>
+
+1150220762 source:e:\trabalho final fcg\src\bitmap.c
+	"bitmap.h"
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+
+1032704640 e:\trabalho final fcg\src\bitmap.h
+	<GL/glut.h>
+	<windows.h>
+	<wingdi.h>
+
+1336324842 source:e:\trabalho final fcg\src\glm.cpp
+	<windows.h>
+	<math.h>
+	<cmath>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	"glm.h"
+
+1339608076 source:e:\trabalho final fcg\src\main.cpp
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<cmath>
+	<iostream>
+	<gl/glut.h>
+	<al/alut.h>
+	"bitmap.h"
+	"../../src/ModelPorsche.h"
+
+1334588768 e:\trabalho final fcg\codeblocks\include\al\alut.h
+	<al/alc.h>
+	<al/al.h>
+	<OpenAL/alc.h>
+	<OpenAL/al.h>
+	<AL/al.h>
+	<AL/alc.h>
+
+1176490968 e:\trabalho final fcg\codeblocks\include\al\alc.h
+
+1165602658 e:\trabalho final fcg\codeblocks\include\al\al.h
+
+1336151164 source:e:\trabalho final fcg\src\3dobject.cpp
+	"3DObject.h"
+	<malloc.h>
+
