@@ -100,6 +100,12 @@ float posX = 0.0f;
 float posY = 0.4f;
 float posZ = 1.0f;
 
+//Thaose are the camera coords. Latter, they shall be initiated according to the blue car position
+float CamPos_x = 0.0f;
+float CamPos_y = 0.0f;
+float CamPos_z = 0.0f;
+
+
 float axis[3];
 float lastPos[3] = {0,0,0};
 float angle; //camera angle
@@ -188,8 +194,25 @@ void setWindow() {
 Atualiza a posição e orientação da camera
 */
 void updateCam() {
-	gluLookAt(posX,posY + 0.025 * std::abs(sin(headPosAux*PI/180)),posZ,
-		posX + sin(roty*PI/180),posY + 0.025 * std::abs(sin(headPosAux*PI/180)) + cos(rotx*PI/180),posZ -cos(roty*PI/180),
+
+	listenerPos[0] = posX;
+	listenerPos[1] = posY;
+	listenerPos[2] = posZ;
+
+	source0Pos[0] = posX;
+	source0Pos[1] = posY;
+	source0Pos[2] = posZ;
+
+    //makes the car "follow" the camera
+    modelPOR.Translate(posX,posY,posZ);
+
+
+    CamPos_x = posX;
+    CamPos_y = posY + 1.33;
+    CamPos_z = posZ + 3.33;
+
+    gluLookAt(CamPos_x,CamPos_y,CamPos_z,
+		posX /*+ sin(roty*PI/180)*/,posY /*+ 0.025 * std::abs(sin(headPosAux*PI/180)) + cos(rotx*PI/180)*/,posZ /*-cos(roty*PI/180)*/,
 		0.0,1.0,0.0);
 /**
 Parameters
@@ -203,21 +226,8 @@ Specifies the position of the reference point.
 upX, upY, upZ
 Specifies the direction of the up vector.
 */
-	listenerPos[0] = posX;
-	listenerPos[1] = posY;
-	listenerPos[2] = posZ;
 
-	source0Pos[0] = posX;
-	source0Pos[1] = posY;
-	source0Pos[2] = posZ;
 
-    GLfloat distD, distX, distY;
-
-    distD = posZ - 3.3;
-    distX = (posX *rotx);
-
-    //makes the car "follow" the camera
-    modelPOR.Translate(distX,posY,distD);
 
 }
 
@@ -360,8 +370,8 @@ void initTexture(void)
     // Set texture parameters
 	glTexParameteri(type, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(type, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(type, GL_TEXTURE_WRAP_S, GL_CLAMP); // why not GL_REPEAT?
-    glTexParameteri(type, GL_TEXTURE_WRAP_T, GL_CLAMP);
+	glTexParameteri(type, GL_TEXTURE_WRAP_S, GL_REPEAT); // why not GL_REPEAT?
+    glTexParameteri(type, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
     glTexImage2D(type, 0, 4, info->bmiHeader.biWidth, info->bmiHeader.biHeight,
                   0, GL_RGBA, GL_UNSIGNED_BYTE, rgba );
