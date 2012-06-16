@@ -384,7 +384,7 @@ void initTexture(void)
     // Now loads the map:
     printf ("\nLoading map..\n");
     // Load a texture object (256x256 true color)
-    mapbits = LoadDIBitmap("..\\res\\mapping.bmp", &mapinfo);
+    mapbits = LoadDIBitmap("..\\res\\modelmap.bmp", &mapinfo);
     if (mapbits == (GLubyte *)0) {
 		printf ("Error loading map!\n\n");
 		return;
@@ -397,14 +397,14 @@ void initTexture(void)
 
 	for (x = 0; x < mapinfo->bmiHeader.biWidth; x++) {
 		for (z = 0; z < mapinfo->bmiHeader.biHeight; z++) {
-			if ((mapbits + x * z)[0] >= (GLubyte)250) { // Blue car
+			if (((mapbits + x * z)[0] >= (GLubyte)250) && ((mapbits + x * z)[2] == ((GLubyte)000)) && ((mapbits + x * z)[1] == ((GLubyte)000))) { // Blue car
 				printf("found blue car at (%d, %d)\n", x, z);
 				blueCar_x = (float)x / (float)mapinfo->bmiHeader.biWidth;
 				blueCar_z = (float)z / (float)mapinfo->bmiHeader.biHeight;
                 carFound++;
 			}
 
-			if ((mapbits + x * z)[2] >= (GLubyte)250) { // Red car
+			if (((mapbits + x * z)[2] >= ((GLubyte)1)) && ((mapbits + x * z)[0] == ((GLubyte)000)) && ((mapbits + x * z)[1] == ((GLubyte)000)))  { // Red car
 				printf("found red car at (%d, %d)\n", x, z);
 				redCar_x = (float)x / (float)mapinfo->bmiHeader.biWidth;
 				redCar_z = (float)z / (float)mapinfo->bmiHeader.biHeight;
@@ -435,7 +435,7 @@ void initModel() {
     porTest1 = ModelPorsche();
     porTest1.Init();
     porTest2 = ModelPorsche();
-    porTest1.Init();
+    porTest2.Init();
 
 	printf("Models ok. \n \n \n");
 }
@@ -523,9 +523,9 @@ void renderScene() {
     //Testing the map car draw
     if(foundCars)
     {
-    porTest1.Translate(redCar_x,1.0,redCar_z);
+    porTest1.Translate(redCar_x,0.33,redCar_z);
     porTest1.Draw();
-    porTest2.Translate(blueCar_x,1.0,blueCar_z);
+    porTest2.Translate(blueCar_x,0.33,blueCar_z);
     porTest2.Draw();
     }
 }
